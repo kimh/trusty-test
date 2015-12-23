@@ -5,5 +5,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - cat /etc/lsb-release
 
