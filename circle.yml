@@ -2,6 +2,7 @@
 dependencies:
   override:
     - cat /etc/hostname
+    - cat /etc/hosts
 
 test:
   override:
