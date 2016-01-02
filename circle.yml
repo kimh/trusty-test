@@ -1,9 +1,9 @@
 
 dependencies:
   override:
-    - exit 0
+    - cat /etc/hostname
 
 test:
   override:
-    - cat /etc/lsb-release
+    - exit 0
 
