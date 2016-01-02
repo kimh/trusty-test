@@ -3,6 +3,7 @@ dependencies:
   override:
     - cat /etc/hostname
     - cat /etc/hosts
+    - sudo uptime
 
 test:
   override:
