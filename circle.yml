@@ -1,6 +1,6 @@
 machine:
   services:
-    - mongo
+    - mongodb
 
 dependencies:
   pre:
