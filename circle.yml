@@ -1,11 +1,10 @@
-
 dependencies:
+  pre:
+    - gem install bundler
   override:
-    - cat /etc/hostname
-    - cat /etc/hosts
-    - sudo uptime
+    - exit 0
 
 test:
   override:
-    - exit 0
+    - bundler -v
 
