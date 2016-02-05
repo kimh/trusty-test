@@ -1,10 +1,6 @@
-machine:
-  services:
-    - mongodb
-
 dependencies:
-  pre:
-    - gem install bundler
+  #pre:
+  #  - gem install bundler
 
   override:
     - exit 0
