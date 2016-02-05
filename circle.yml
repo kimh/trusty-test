@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - bundler -v
+    - php --version
 
