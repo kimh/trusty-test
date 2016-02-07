@@ -1,6 +1,9 @@
 machine:
-  php:
-    version: 7.0.2
+  pre:
+    - sudo curl -L -o /usr/bin/docker 'https://s3-external-1.amazonaws.com/circle-downloads/docker-1.10.0'
+    - sudo chmod 0755 /usr/bin/docker
+  services:
+    - docker
 
 dependencies:
   override:
@@ -8,5 +11,5 @@ dependencies:
 
 test:
   override:
-    - php --version
+    - exit 0
 
