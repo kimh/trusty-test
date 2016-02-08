@@ -2,6 +2,7 @@ machine:
   pre:
     - sudo curl -L -o /usr/bin/docker 'https://s3-external-1.amazonaws.com/circle-downloads/docker-1.10.0'
     - sudo chmod 0755 /usr/bin/docker
+    - echo 'function docker-start() {  container=yes docker daemon -s btrfs -D }' >> ~/.circlerc
 
 dependencies:
   override:
