@@ -1,6 +1,6 @@
 machine:
-  ruby:
-    version: 2.2.4
+  node:
+    version: v5.2.0
 
 dependencies:
   override:
@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - npm -v
 
