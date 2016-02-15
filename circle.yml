@@ -1,8 +1,12 @@
+machine:
+  nodejs:
+    version: v4.3.0
+
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - node --version
 
