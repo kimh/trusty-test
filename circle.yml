@@ -8,5 +8,6 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - node -v
+    - npm -i -g npm@latest && npm i
 
