@@ -1,5 +1,5 @@
 machine:
-  nodejs:
+  node:
     version: v4.3.0
 
 dependencies:
