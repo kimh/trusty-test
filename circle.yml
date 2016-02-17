@@ -1,4 +1,10 @@
+machine:
+  python:
+    version: "2.7.6"
+
 dependencies:
+  pre:
+    - rc="~/.circlerc"; grep -v "activate" $rc > $rc.tmp && cp $rc.tmp $rc
   override:
     - exit 0
 
