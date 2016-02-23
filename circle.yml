@@ -1,6 +1,6 @@
 machine:
   pre:
-    - service neo4j-service stop
+    - sudo service neo4j-service stop
  
 dependencies:
   override:
