@@ -1,8 +1,12 @@
+machine:
+  pre:
+    - service neo4j-service stop
+ 
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - ps ax | grep neo4j
 
