@@ -1,3 +1,6 @@
+machine:
+  services:
+    - beanstalkd
 dependencies:
   override:
     - exit 0
