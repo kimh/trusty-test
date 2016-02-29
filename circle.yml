@@ -1,8 +1,18 @@
+machine:
+  python:
+    version: 2.7.6
+
+  pre:
+    - sudo apt-get install circleci-python-2.7.6
+
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - python -c "import sysconfig; print(sysconfig.get_config_vars('CONFIG_ARGS'))" 
+    - python -c "import sys; print(sys.maxunicode)"
+    - deactivate 
+    - python -c "import sys; print(sys.maxunicode)"
 
