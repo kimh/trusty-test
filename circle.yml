@@ -4,5 +4,6 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - curl -s https://packagecloud.io/install/repositories/circleci/trusty/script.deb.sh | sudo bash
+    - sudo apt-get install circleci-nodejs-5.3.0
 
