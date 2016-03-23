@@ -1,3 +1,7 @@
+machine:
+  services:
+    - rabbitmq-server
+
 dependencies:
   override:
     - exit 0
