@@ -1,6 +1,6 @@
 machine:
   services:
-    - redis
+    - neo4j
 
 dependencies:
   override:
@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - ps ax | grep -i redis-server
+    - ps ax | grep -i neo4j
 
