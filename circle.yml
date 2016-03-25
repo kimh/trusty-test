@@ -1,8 +1,12 @@
+machine:
+  services:
+    - elasticsearch
+
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - ps ax | grep -i elasticsearch
 
