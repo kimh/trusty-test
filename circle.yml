@@ -1,6 +1,6 @@
 machine:
   services:
-    - elasticsearch
+    - redis
 
 dependencies:
   override:
@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - ps ax | grep -i elasticsearch
+    - ps ax | grep -i redis-server
 
