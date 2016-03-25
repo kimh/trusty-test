@@ -4,6 +4,10 @@ machine:
     - memcached
     - beanstalkd
 
+  nodejs:
+    version:
+      v4.1.2
+
 dependencies:
   override:
     - exit 0
