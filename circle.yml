@@ -1,6 +1,6 @@
 machine:
   services:
-    - neo4j
+    - memcached
 
 dependencies:
   override:
@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - ps ax | grep -i neo4j
+    - ps ax | grep -i memcached
 
