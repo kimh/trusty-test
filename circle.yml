@@ -1,8 +1,13 @@
+machine:
+  ruby:
+    version: 2.1.4
+
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - ls -la /opt/circleci/python
+    - bundler
 
