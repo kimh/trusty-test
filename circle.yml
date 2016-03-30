@@ -10,5 +10,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - gcloud --version
 
