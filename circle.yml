@@ -1,8 +1,15 @@
+machine:
+  environment:
+    PATH: /opt/circleci/bin:$PATH
+
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - circle-env
 
