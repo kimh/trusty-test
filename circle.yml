@@ -1,8 +1,10 @@
 dependencies:
   override:
-    - exit 0
+    - wget https://s3-external-1.amazonaws.com/circle-downloads/circleci-php-7.0.3_2_amd64.deb
+    - sudo dpkg -i circleci-php-7.0.3_2_amd64.deb || apt-get -f install
+    - phpenv rehash
 
 test:
   override:
-    - exit 0
+    - pecl
 
