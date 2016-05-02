@@ -1,7 +1,7 @@
 dependencies:
   override:
     - wget https://s3-external-1.amazonaws.com/circle-downloads/circleci-php-7.0.3_2_amd64.deb
-    - sudo dpkg -i circleci-php-7.0.3_2_amd64.deb || apt-get -f install
+    - sudo dpkg -i circleci-php-7.0.3_2_amd64.deb || sudo apt-get -f install
     - phpenv rehash
 
 test:
