@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - circle-env install google-chrome
 
