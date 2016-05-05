@@ -3,8 +3,11 @@ machine:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
 
 dependencies:
+  cache_directories:
+    - /opt/circleci/ruby/ruby-2.2.2
+
   override:
-    - exit 0
+    - if [ ! -e /opt/circleci/ruby/ruby-2.2.2 ]; then rvm install 2.2.2; fi
 
 test:
   override:
