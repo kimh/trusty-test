@@ -4,6 +4,7 @@ machine:
 
   environment:
     IMAGE_TAG: "trusty-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)"
+    FOO: $(echo "foo")
 
 dependencies:
   override:
