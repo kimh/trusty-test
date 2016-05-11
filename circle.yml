@@ -2,11 +2,14 @@ machine:
   pre:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
 
+  environment:
+    IMAGE_TAG: "trusty-${CIRCLE_BUILD_NUM}-$(git rev-parse --short HEAD)"
+
 dependencies:
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - echo $IMAGE_TAG
 
