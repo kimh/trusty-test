@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - bash pkg-versions.sh | jq . > $CIRCLE_ARTIFACTS/versions.json
+    - bash pkg-versions.sh > $CIRCLE_ARTIFACTS/versions.json
 
