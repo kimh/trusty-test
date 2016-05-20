@@ -1,6 +1,10 @@
 machine:
   pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+    - curl -s https://packagecloud.io/install/repositories/circleci/trusty/script.deb.sh | sudo bash
+    - sudo apt-get install circleci-php-7.0.4=4
+
+  php:
+    version: 7.0.4
 
 dependencies:
   override:
@@ -8,5 +12,6 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - pecl --help
+    - php -i
 
