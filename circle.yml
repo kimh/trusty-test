@@ -1,6 +1,6 @@
-machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+machine
+  python:
+    version: 3.5.1
 
 dependencies:
   override:
