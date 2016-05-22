@@ -1,10 +1,11 @@
 machine:
   pre:
-    - pyenv local 3.5.1 && pyenv rehash
+    - pyenv local 3.5.1
 
 dependencies:
   override:
-    - pyvenv
+    - python --version
+    - pyvenv --help
 
 test:
   override:
