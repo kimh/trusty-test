@@ -1,6 +1,9 @@
 machine:
   pre:
-    - pyenv global 3.5.1
+    - rm .python_version
+
+  python:
+    version: 3.5.1
 
 dependencies:
   override:
