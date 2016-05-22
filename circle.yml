@@ -1,4 +1,4 @@
-machine
+machine:
   python:
     version: 3.5.1
 
