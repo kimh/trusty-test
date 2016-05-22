@@ -1,6 +1,6 @@
 machine:
-  python:
-    version: 3.3.5
+  pre:
+    - pyenv global 3.5.1
 
 dependencies:
   override:
