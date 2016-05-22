@@ -1,6 +1,7 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+  php:
+    version: 7.0.4
+  
 
 dependencies:
   override:
@@ -8,5 +9,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - php -i
 
