@@ -1,6 +1,6 @@
 machine:
   pre:
-    - rm .python_version
+    - rm .python-version
 
   python:
     version: 3.5.1
