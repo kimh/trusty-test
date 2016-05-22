@@ -6,6 +6,7 @@ dependencies:
   override:
     - python --version
     - pyvenv --help
+    - virtualenv --help
 
 test:
   override:
