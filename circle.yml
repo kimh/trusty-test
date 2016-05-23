@@ -1,6 +1,6 @@
 machine:
   pre:
-    - mv $ANDROID_HOME /tmp/android-sdk-linux
+    - sudo mv $ANDROID_HOME /tmp/android-sdk-linux
     - sed -i 's|/usr/local/android-sdk-linux|/tmp/android-sdk-linux|g' /home/ubuntu/.circlerc
 
 dependencies:
