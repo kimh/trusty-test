@@ -1,6 +1,6 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+  timezone:
+    Asia/Tokyo
 
 dependencies:
   override:
@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    -  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    -  date
 
