@@ -1,9 +1,9 @@
 machine:
   pre:
-    - time sudo apt-get circleci-install-ruby-2.3.1
+    - time sudo sudo apt-get install circleci-ruby-2.1.8=1
   
   ruby:
-    version: 2.3.1
+    version: 2.1.8
 
 dependencies:
   override:
