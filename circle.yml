@@ -8,5 +8,6 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - dpkg -l | grep -i mysql
+    - cat /opt/circleci/image_version
 
