@@ -1,6 +1,6 @@
 machine:
   java:
-    version: jdk1.8.0
+    version: oraclejdk8
 
 dependencies:
   override:
