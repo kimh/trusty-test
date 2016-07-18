@@ -1,12 +1,11 @@
 machine:
   pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
-
-dependencies:
-  override:
     - sudo USE_PRECOMPILE=true circleci-install ruby 2.2.2
+
+  ruby:
+    version: 2.2.2
 
 test:
   override:
-    - exit 0
+    - ruby --version
 
