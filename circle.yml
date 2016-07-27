@@ -1,12 +1,8 @@
-machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
-
 dependencies:
-  override:
-    - exit 0
+  cache_directories:
+    - "~/docker"
 
-test:
   override:
-    - exit 0
-
+    - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
+    - docker build -t circleci/elasticsearch .
+    - mkdir -p ~/docker; docker save circleci/elasticsearch > ~/docker/image.tar
