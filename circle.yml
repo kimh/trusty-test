@@ -1,8 +1,9 @@
 machine:
-  post:
-    - sudo curl -L -o /usr/bin/docker 'https://s3.amazonaws.com/circle-downloads/docker-1.9.0-circleci'
-    - sudo service docker start
-    - docker info
+  pre:
+    - sudo curl -L -o /usr/bin/docker 'https://s3.amazonaws.com/circle-downloads/docker-1.8.2-circleci'
+
+  services:
+    - docker
 
 dependencies:
   cache_directories:
