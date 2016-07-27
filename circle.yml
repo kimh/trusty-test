@@ -8,6 +8,7 @@ dependencies:
     - "~/docker"
 
   override:
-    - if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; else echo "no cache"; fi
-    - docker build -t cache-test .
-    - mkdir -p ~/docker; docker save cache-test > ~/docker/image.tar
+    #- if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; else echo "no cache"; fi
+    #- docker build -t cache-test .
+    #- mkdir -p ~/docker; docker save cache-test > ~/docker/image.tar
+    - echo 1
