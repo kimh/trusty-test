@@ -11,5 +11,5 @@ dependencies:
 
   override:
     - if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; docker images; else echo "no cache"; fi
-    - docker build -t cache-test .
+    - docker build -t cache-test:foo .
     - mkdir -p ~/docker; docker save cache-test > ~/docker/image.tar
