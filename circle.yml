@@ -6,12 +6,10 @@ machine:
     - docker
 
 dependencies:
-  #cache_directories:
-  #  - "~/docker"
+  cache_directories:
+    - "~/docker"
 
   override:
-    #- if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; docker images; else echo "no cache"; fi
-    - if [[ -e image.tar ]]; then echo "loading docker image"; docker load -i image.tar; docker images; else echo "no cache"; fi
+    - if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; docker images; else echo "no cache"; fi
     - docker build -t cache-test .
-    #- mkdir -p ~/docker; docker save cache-test > ~/docker/image.tar
-    #- echo 1
+    - mkdir -p ~/docker; docker save cache-test > ~/docker/image.tar
