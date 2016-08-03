@@ -1,6 +1,6 @@
 machine:
   pre:
-    - sudo curl -L -o /usr/bin/docker 'https://s3.amazonaws.com/circle-downloads/docker-1.9.1-circleci-cp-workaround'
+    - sudo curl -L -o /usr/bin/docker 'https://s3.amazonaws.com/circle-downloads/docker-1.10.0'
 
   services:
     - docker
@@ -10,7 +10,7 @@ dependencies:
     - "~/docker"
 
   override:
-    #- docker pull busybox
+    - docker pull busybox
     - if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; docker images; else echo "no cache"; fi
     - docker build -t cache-test:foo .
     - mkdir -p ~/docker; docker save cache-test > ~/docker/image.tar
