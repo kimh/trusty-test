@@ -11,7 +11,7 @@ dependencies:
     - "~/docker"
 
   override:
-    - docker pull busybox
+    #- docker pull busybox
     - docker images
     #- if [[ -e ~/docker/image.tar ]]; then echo "loading docker image"; docker load -i ~/docker/image.tar; docker images; else echo "no cache"; fi
     #- docker build -t cache-test:foo .
