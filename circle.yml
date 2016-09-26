@@ -1,12 +1,12 @@
-machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
-
 dependencies:
+
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
-
+    - wget -q https://ftp.postgresql.org/pub/source/v9.5.4/postgresql-9.5.4.tar.gz
+    - tar zxvf postgresql-9.5.4.tar.gz 
+    - cd postgresql-9.5.4
+    - ./configure
+    - make
