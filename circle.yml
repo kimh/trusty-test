@@ -2,8 +2,8 @@ machine:
   java: 
     version: openjdk7
 
-    environment:
-      PATH:$(echo $PATH | sed 's|/usr/lib/jvm/jdk1.8.0/bin:||')
+  environment:
+    PATH: $(echo $PATH | sed 's|/usr/lib/jvm/jdk1.8.0/bin:||')
 
 dependencies:
   override:
