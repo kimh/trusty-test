@@ -1,6 +1,6 @@
 machine:
   pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+    - echo 'source /opt/qt55/bin/qt55-env.sh' >> ${CIRCLECI_HOME}/.circlerc
 
 dependencies:
   override:
@@ -8,5 +8,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - qmake -query QT_VERSION
 
