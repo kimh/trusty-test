@@ -1,6 +1,6 @@
 machine:
   pre:
-    - echo 'source /opt/qt55/bin/qt55-env.sh' >> ${CIRCLECI_HOME}/.circlerc
+    - echo 'source /opt/qt55/bin/qt55-env.sh' >> ~/.circlerc
 
 dependencies:
   override:
