@@ -1,11 +1,11 @@
 machine:
-  environment:
-    BUILD_TARGET: $(git log --format=%B -n 1 | grep "build-target" | awk -F: '{print $2}' | tr -d ' ')
-
   pre:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
 
 dependencies:
+  environment:
+    BUILD_TARGET: $(git log --format=%B -n 1 | grep "build-target" | awk -F: '{print $2}' | tr -d ' ')
+
   override:
     - ? |
         case $BUILD_TARGET in
