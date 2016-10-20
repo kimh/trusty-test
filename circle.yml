@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   environment:
-    BUILD_TARGET: $(git log --format=%B -n 1 | grep "build-target" | awk -F: '{print $2}' | tr -d ' ')
+    BUILD_TARGET: $(git log -n 1 | grep "build-target" | awk -F: '{print $2}' | tr -d ' ')
 
   override:
     - ? |
