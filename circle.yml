@@ -4,7 +4,18 @@ machine:
 
 dependencies:
   override:
-    - exit 0
+    - ? |
+        case $BUILD_TARGET in
+          ubuntu-14.04-XXL)
+            make ubuntu-14.04-XXL
+            ;;
+          *)
+            echo "\'$BUILD_TARGET\' is not supported build target. Exitting..."
+            exit 1
+            ;;
+        esac
+      :
+        timeout: 3600
 
 test:
   override:
