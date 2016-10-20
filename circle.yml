@@ -1,24 +1,11 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
-
-dependencies:
   environment:
     BUILD_TARGET: $(echo foo)
+    HOGE: $(echo hoge)
 
+dependencies:
   override:
-    - ? |
-        case $BUILD_TARGET in
-          ubuntu-14.04-XXL)
-            make ubuntu-14.04-XXL
-            ;;
-          *)
-            echo "\'$BUILD_TARGET\' is not supported build target. Exitting..."
-            exit 1
-            ;;
-        esac
-      :
-        timeout: 3600
+    - echo $HOGE
 
 test:
   override:
