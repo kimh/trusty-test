@@ -4,5 +4,5 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - echo pr
 
