@@ -3,10 +3,16 @@ machine:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
 
 dependencies:
+  pre:
+    - sudo service postgresql stop
+    - sudo mv /usr/lib/postgresql/9.6 /usr/lib/postgresql/_9.6  
+    - sudo /etc/postgresql/9.6 /etc/postgresql/_9.6
+    - sudo service postgresql start 9.5
+
   override:
     - exit 0
 
 test:
   override:
-    - exit 0
+    - ps ax | grep postgresql
 
