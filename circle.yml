@@ -6,7 +6,7 @@ dependencies:
   pre:
     - sudo service postgresql stop
     - sudo mv /usr/lib/postgresql/9.6 /usr/lib/postgresql/_9.6  
-    - sudo /etc/postgresql/9.6 /etc/postgresql/_9.6
+    - sudo mv /etc/postgresql/9.6 /etc/postgresql/_9.6
     - sudo service postgresql start 9.5
 
   override:
