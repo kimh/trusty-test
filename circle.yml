@@ -1,12 +1,16 @@
 machine:
   pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+    - pwd
+
+checkout:
+  pre:
+    - pwd
 
 dependencies:
   override:
-    - exit 0
+    - pwd
 
 test:
   override:
-    - exit 0
+    - pwd
 
