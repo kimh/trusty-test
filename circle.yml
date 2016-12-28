@@ -1,4 +1,4 @@
-machine::
+machine:
   pre:
     #- sudo mv /usr/lib/postgresql/9.6 /usr/lib/postgresql/_9.6  
     #- sudo mv /etc/postgresql/9.6 /etc/postgresql/_9.6
