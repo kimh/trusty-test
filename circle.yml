@@ -1,6 +1,6 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+  nodejs:
+    version: 7.3.0 
 
 dependencies:
   override:
