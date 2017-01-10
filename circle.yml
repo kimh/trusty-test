@@ -6,6 +6,7 @@ dependencies:
   override:
     - ls /opt/circleci
     - cat /opt/circleci/image_version
+    - find /opt/circleci
 
 test:
   override:
