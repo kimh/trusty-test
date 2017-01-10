@@ -1,9 +1,14 @@
+machine:
+  python:
+    version: 3.6.0
+
 dependencies:
   override:
     - ls /opt/circleci
-    - cat /opt/circleci/versions.json
+    - cat /opt/circleci/image_version
 
 test:
   override:
-    - exit 0
+    - python --version
+    
 
