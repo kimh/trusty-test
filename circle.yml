@@ -1,13 +1,13 @@
-# after
-machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+version: 2
+executorType: docker
+containerInfo:
+  - image: kimh/picard-trusty:5740
 
-dependencies:
-  override:
-    - exit 0
+stages:
+  build:
 
-test:
-  override:
-    - exit 0
-
+    parallel: 5
+    steps:
+      - type: shell
+        pwd: /tmp
+        command: echo hi
