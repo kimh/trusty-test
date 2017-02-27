@@ -8,5 +8,6 @@ dependencies:
 
 test:
   override:
-    - exit 0
+    - echo $CI_PULL_REQUESTS; echo $CI_PULL_REQUEST 
+
 
