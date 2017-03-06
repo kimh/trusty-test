@@ -1,10 +1,10 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+  ruby:
+    version: 2.3.3
 
 dependencies:
   override:
-    - exit 0
+    - find /opt/circleci/ruby/2.3.3 | grep libruby.so
 
 test:
   override:
