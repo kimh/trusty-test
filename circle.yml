@@ -1,6 +1,6 @@
 dependencies:
   override:
-    - java -version
+    - ls -la /usr/lib/jvm
 
 test:
   override:
