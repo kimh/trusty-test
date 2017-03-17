@@ -2,9 +2,14 @@ machine:
   pre:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
 
+general:
+  artifacts:
+    - /tmp/artifacts
+
 dependencies:
   override:
-    - exit 0
+    - mkdir /tmp/artifacts
+    - echo "my artifact files in a dir" > /tmp/artifacts/artifact-2;
 
 test:
   override:
