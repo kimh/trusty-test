@@ -1,20 +1,7 @@
 machine:
   services:
-    - cassandra
-    - elasticsearch
-    - rabbitmq-server
-    - redis
-    - riak
-    - beanstalkd
-    - couchdb
-    - neo4j
+    - docker
+
 test:
   override:
-    - service cassandra status # cassandra
-    - curl 'localhost:9200/_cat/indices?v' # elastic search
-    - service rabbitmq-server status # rabbitmq
-    - redis-cli ping # redis
-    - curl http://127.0.0.1:8098/ping # riak
-    - service beanstalkd status # beeanstalkd
-    - curl http://localhost:8091/pools/default # couchbase
-    - curl http://localhost:7474/db/data # neo4j
+    - docker run busybox uptime
