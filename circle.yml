@@ -1,8 +1,7 @@
 machine:
-  services:
-    - docker
+  ruby:
+    version: 2.3.4
 
 test:
   override:
-    - docker version
-    - docker ps
+    - ruby --version
