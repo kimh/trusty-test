@@ -4,4 +4,5 @@ machine:
 
 test:
   override:
-    - docker run busybox uptime
+    - docker version
+    - docker ps
