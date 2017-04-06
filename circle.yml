@@ -2,6 +2,7 @@ dependencies:
   override:
     - cat /etc/lsb-release
     - cat /opt/circleci/image_version
+    - sleep 100
 
 test:
   override:
