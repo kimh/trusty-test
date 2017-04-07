@@ -1,6 +1,6 @@
 machine:
-  services:
-    - docker
+  ruby:
+    version: 2.3.4
 
 dependencies:
   override:
@@ -8,5 +8,6 @@ dependencies:
 
 test:
   override:
-    - docker ps
+    - bundler --version
+    - gem --version
 
