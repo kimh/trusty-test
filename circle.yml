@@ -1,8 +1,12 @@
+machine:
+  services:
+    - docker
+
 dependencies:
   override:
     - cat /opt/circleci/image_version
 
 test:
   override:
-    - exit 0
+    - docker ps
 
