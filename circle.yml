@@ -1,7 +1,7 @@
 dependencies:
   override:
     - cat /opt/circleci/image_version
-    - go --version
+    - go version
     - gcloud --version
 
 test:
