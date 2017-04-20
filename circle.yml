@@ -1,10 +1,10 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+  java:
+    version: oraclejdk8
 
 dependencies:
   override:
-    - exit 0
+    - java -version
 
 test:
   override:
