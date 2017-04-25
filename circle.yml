@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   override:
-    - exit 0
+    - docker run -d -p 3000:80 nginx && sleep 3 && curl localhost:3000
 
 test:
   override:
