@@ -2,6 +2,9 @@ machine:
   services:
     - docker
 
+  environment:
+    DOCKER_HOST: unix:///var/run/docker.sock 
+
 dependencies:
   override:
     - docker run -d -p 3000:80 nginx && sleep 3 && curl localhost:3000
