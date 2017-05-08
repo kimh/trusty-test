@@ -1,12 +1,35 @@
 machine:
-  pre:
-    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+  node:
+    version: 6.1.0
+  services:
+    - docker
 
 dependencies:
   override:
-    - exit 0
+    yarn
+  cache_directories:
+    - ~/.cache/yarn
 
 test:
   override:
-    - exit 0
+    - yarn lint
+    - yarn test
+    # - yarn build-prod
+    - docker info
+    - docker build --rm=false -t ambidextrous/liiist .
 
+deployment:
+  production:
+    branch: master
+  staging:
+    branch: develop
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push ambidextrous/liiist
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push ambidextrous/liiist
