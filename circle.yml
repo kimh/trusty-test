@@ -3,7 +3,7 @@ dependencies:
     - curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.deb.sh | sudo bash
     - sudo apt -y install sysbench
     - sysbench --help
-    - mysqladmin -u root create dbtest
+    - mysqladmin -u root -h 127.0.0.1 create dbtest
     - sysbench --test=oltp --oltp-table-size=10000000 --db-driver=mysql --mysql-db=dbtest --mysql-user=root --mysql-host=127.0.0.1 prepare
     - sysbench --test=oltp --oltp-read-only=off --oltp-table-size=10000000 --oltp-test-mode=complex --num-threads=40 --max-requests=0 --max-time=600 --mysql-db=dbtest --mysql-user=root --mysql-host=127.0.0.1 run
 
