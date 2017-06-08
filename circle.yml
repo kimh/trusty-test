@@ -1,6 +1,6 @@
-general:
-  artifacts:
-    - "/tmp/foo.json"
+#general:
+#  artifacts:
+#    - "/tmp/foo.json"
 
 machine:
   pre:
@@ -12,7 +12,6 @@ dependencies:
 
 test:
   post:
-    - mkdir $CIRCLE_ARTIFACTS/json_output
-    - echo "artifacts" > $CIRCLE_ARTIFACTS/json_output/my_art.json
-    - echo "artifacts" > /tmp/foo.json
+    - mkdir $CIRCLE_ARTIFACTS/json_output; echo "artifacts" > $CIRCLE_ARTIFACTS/json_output/my_art.json:
+        parallel: true
 
