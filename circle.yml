@@ -1,6 +1,6 @@
 general:
   artifacts:
-    - "/tmp/foo.json
+    - "/tmp/foo.json"
 
 machine:
   pre:
