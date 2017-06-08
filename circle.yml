@@ -1,3 +1,7 @@
+general:
+  artifacts:
+    - "/tmp/foo.json
+
 machine:
   pre:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
@@ -10,4 +14,5 @@ test:
   post:
     - mkdir $CIRCLE_ARTIFACTS/json_output
     - echo "artifacts" > $CIRCLE_ARTIFACTS/json_output/my_art.json
+    - echo "artifacts" > /tmp/foo.json
 
