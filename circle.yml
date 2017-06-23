@@ -1,6 +1,14 @@
+machine:
+  override:
+    - echo $CIRCLE_NODE_INDEX
+
+database:
+  override:
+    - echo $CIRCLE_NODE_INDEX
+
 dependencies:
   override:
-    - exit 0
+    - echo $CIRCLE_NODE_INDEX
 
 test:
   override:
