@@ -5,6 +5,7 @@ machine:
 dependencies:
   override:
     - heroku --version
+    - yarn --version
 
 test:
   override:
