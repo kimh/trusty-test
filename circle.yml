@@ -1,6 +1,7 @@
 dependencies:
   override:
-    - go version
+    - cat /opt/circleci/image_version
+    - echo $GIT_LFS_SKIP_SMUDGE
 
 test:
   override:
