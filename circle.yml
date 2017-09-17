@@ -3,6 +3,10 @@ machine:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circle-env.sh | bash
 
 dependencies:
+  pre:
+    - echo "this is from kirk config"
+  post:
+    - echo "this is from kirk config"
   override:
     - exit 0
 
