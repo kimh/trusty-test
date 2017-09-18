@@ -11,6 +11,9 @@ dependencies:
     - exit 0
 
 test:
+  pre:
+    - echo "this is pre test from kirk config"
+  post:
+    - echo "this is post test from kirk config"
   override:
-    - exit 0
-
+    - echo "this is override test from kirk config"
